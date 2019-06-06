@@ -1,11 +1,11 @@
- 字符串型变量
+ //字符串型变量
  <?php
 $txt="heroes never die";//定义了名为txt的文本变量，并输出
 echo $txt;
 ?> 
 
 
-并置运算符
+//并置运算符
  <?php
 $txt1="heroes never die";
 $txt2="英雄不朽!";
@@ -15,7 +15,7 @@ echo $txt1 . " " . $txt2;//并置运算符的作用是把两串字符串放在�
 
 
 
-输出字符串长度的函数：strlen()
+//输出字符串长度的函数：strlen()
  <?php
 echo strlen("abcdefg");
 ?> 
@@ -24,7 +24,7 @@ echo strlen("abcdefg");
 
 
 
-strpos()函数
+//strpos()函数
  <?php
 echo strpos("abcdefgh","def");//输出某一段文字的开头在字符串中第几位
 ?> 
