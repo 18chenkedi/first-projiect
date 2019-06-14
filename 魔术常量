@@ -1,0 +1,18 @@
+<?php
+echo '该文件位于 " '  . __FILE__ . ' " ';//__FILE__的作用是找到当前文件所在目录
+?>
+
+
+<?php
+echo '该文件位于 " '  . __DIR__ . ' " ';//对比__FILE__，__DIR__不会显示当前PHP文件的名字
+?>
+
+
+
+<?php
+function dengguojing()
+{
+	echo "同学的名字是：".__FUNCTION__."<br>";//__FUNCTION__可以输出函数名
+}
+dengguojing();
+?>
