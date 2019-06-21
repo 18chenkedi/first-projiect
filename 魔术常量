@@ -16,3 +16,69 @@ function dengguojing()
 }
 dengguojing();
 ?>
+
+
+
+
+<?php
+class lei//定义了一个类，类名为lei 
+{
+    function hanshu()//定义了名为hanshu的函数 
+    {
+        echo '类名为：'  . __CLASS__ . "<br>";
+        echo  '函数名为：' . __FUNCTION__ ;
+	//输出类名及函数名
+    }
+}
+$t = new 类();//新建了一个名为$t的lei类
+$t->hanshu();//调用test类中的hanshu函数，该调用符号和C++中的指针类似
+?>
+
+
+
+class Base//基类，可以被继承 
+{
+    public function sayHello()//基类中的sayHello函数，作用是输出Hello 
+    {
+        echo 'Hello ';
+    }
+}
+ 
+trait SayWorld 
+
+{
+    public function sayHello()//trait方法中的sayHello函数，此时的sayHello函数已经被覆盖，不会直接输出Hello
+    {
+        parent::sayHello();//用parent指针调用了基类中的sayHello函数,结果是输出Hello
+        echo 'World!';
+    }
+}
+ 
+class MyHelloWorld extends Base//MyHelloWorld是一个继承了基类Base的类 
+{
+    use SayWorld;//use是调用trait方法的关键字，意为调用了trait方法中的SayWorld函数
+}
+ 
+$o = new MyHelloWorld();
+$o->sayHello();
+?>
+
+
+<?php
+class classmate
+{
+	function yiyuanguang()
+	{
+		echo "同学的名字是：".__METHOD__."<br>";//__METHOD__在输出函数名的同时，可以输出这个函数或者方法所处的类
+	}
+}
+$a=new classmate;
+$a->yiyuanguang();
+?>
+
+
+<?php
+namespace abcdefg;//命名空间需要自行定义才会输出名字，默认下命名空间输出名字为空
+ 
+echo '命名空间为："', __NAMESPACE__, '"'; // 输出了命名空间的名字
+?>
