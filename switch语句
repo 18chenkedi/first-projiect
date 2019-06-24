@@ -3,11 +3,11 @@ switch(10)
 {
 	case 5:
 	echo "此数为5";
-  break;
+  	break;
 	
 	case 10:
 	echo "此数为10";
-  break;
+  	break;
 	
 	default:
 	echo "此数不在给出的范围之内";
